@@ -12,3 +12,13 @@ function signup(userName) {
 
 module.exports = { signup };  // Export the signup function
 
+// test
+
+const { signup, login } = require('./index');
+
+console.log(signup("User1"));  // User Already Registered, Please Login
+console.log(signup("User2"));  // Signup Successful, Please Login
+
+console.log(login("User2", "Emp@123"));  // Login Successful...
+console.log(login("User2", "WrongPassword"));  // Wrong Password...
+console.log(login("Random", "Emp@123"));  // User Not Found, Please Signup
