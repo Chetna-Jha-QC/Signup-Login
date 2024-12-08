@@ -12,3 +12,21 @@ function signup(userName) {
 
 module.exports = { signup };  // Export the signup function
 
+///////////////////////////////////////////////////////////
+
+function login(userName, password) {
+    const users = ["john", "alice", "bob"];  // Predefined list of users
+    const correctPassword = "Emp@123";  // Correct password for login
+
+    if (users.includes(userName)) {
+        if (password === correctPassword) {
+            return "Login Successful...";
+        } else {
+            return "Wrong Password...";
+        }
+    } else {
+        return "User Not Found, Please Signup";
+    }
+}
+
+module.exports = { signup, login };  // Export both functions
